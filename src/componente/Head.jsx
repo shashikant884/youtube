@@ -1,8 +1,17 @@
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Head = () => {
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
     <div className="grid grid-flow-col p-5 m-2 shadow-lg">
       <div className="flex col-span-1 ">
         <img
+          onClick={() => toggleMenuHandler()}
           className="h-8"
           alt="menu"
           src="data:image/png;base64,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"
