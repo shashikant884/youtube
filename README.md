@@ -23,3 +23,25 @@ useDispatch() To dispatch actions like toggleMenu()
 useSelector() To read state like state.app.isMenuOpen
 
 Redux Toolkit with a slice to manage isMenuOpen state, and in components, you're using useSelector() to read the state and useDispatch() to toggle it.
+
+A VideoContainer component that:
+
+Fetches popular videos from the YouTube Data API
+
+Stores the result in React state
+
+Maps over the data and renders each video with a VideoCart (card) component
+
+VideoContainer
+
+Fetches video data using fetch() inside useEffect
+
+Uses useState to store videos
+
+Uses .map() to render multiple <VideoCart /> components
+
+Receives a single video object (info) as a prop
+
+Extracts details like title, channel, thumbnail, and views
+
+Displays video card UI
