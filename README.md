@@ -45,3 +45,23 @@ Receives a single video object (info) as a prop
 Extracts details like title, channel, thumbnail, and views
 
 Displays video card UI
+
+useSearchParams() is a React Router hook used to read query parameters from the URL.
+
+use Link from react-router-dom to navigate to a specific video page
+Wraps the video thumbnail and allows navigation to the WatchPage via a URL like:
+video ID from the query string using useSearchParams()
+Dispatches a closeMenu action when the component mounts
+In appSlice.js, you manage UI state like showing/hiding a sidebar menu:
+WatchPage loads, the sidebar menu closes for distraction-free video viewing.
+
+Full Flow Recap
+define routes with createBrowserRouter
+
+provide those routes using <RouterProvider>
+
+Use path & element to map URLs to components
+
+Use children to nest routes
+
+Use <Outlet /> in the parent to show child components
