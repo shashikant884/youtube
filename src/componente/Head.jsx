@@ -24,6 +24,9 @@ const Head = () => {
   const getSearchQuerySugsestions = async () => {
     console.log("API CALL - " + searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    if (!data.ok) {
+      throw new Error(`HTTP error! status: ${data.status}`);
+    }
     const json = await data.json();
     setSearchSuggestion(json[1]);
     // console.log(json[1]);

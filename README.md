@@ -65,3 +65,23 @@ Use path & element to map URLs to components
 Use children to nest routes
 
 Use <Outlet /> in the parent to show child components
+
+Implements a debounced input field for search suggestions from the YouTube API.
+Shows suggestions typing
+Hides suggestions when the input loses focus.
+
+Debouncing with setTimeout + clearTimeout:
+Prevents excessive API calls by delaying the request until the user stops typing.
+
+API Call to Get Suggestions:
+Fetches suggestions from YOUTUBE_SEARCH_API + searchQuery.
+Updates the suggestions state with the result.
+
+Controlled Input:
+searchQuery is stored in state.
+On change, it updates the state, which triggers the debounced API call.
+
+Suggestion Display Control:
+Suggestions appear when the input is focused.
+
+Hidden on onBlur.
