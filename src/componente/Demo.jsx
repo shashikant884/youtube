@@ -5,12 +5,12 @@ const Demo = ()=>{
 
     const [text , setText] = useState(0);
     const [isDarkTheme , setIsDarkTheme] = useState(false);
-    console.log(text)
-    console.log(isDarkTheme)
+    // console.log(text)
+    // console.log(isDarkTheme)
     // console.log(isPrime(Number(text)));
 
     const cachedValue = useMemo(()=>findNthPrime(text) , [text])
-    console.log(cachedValue);
+    // console.log(cachedValue);
 
     return(
         <div className={`m-4 p-2 w-96 h-96 border border-black" 

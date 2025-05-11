@@ -34,7 +34,7 @@ const CommentsContainer = () => {
   ];
 
   return (
-    <div className="m-5 p-2">
+    <div className="m-5 p-2 w-2/3 overflow-x-auto whitespace-nowrap border border-gray-400">
       <h1 className="text-2xl font-bold">Comments </h1>
       {commentsData.map((comments, index) => (
         <CommentList key={index} name={comments.name} text={comments.text} />

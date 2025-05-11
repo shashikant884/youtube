@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const ButtonList = () => {
   return (
     <div className="flex">
-      <Button name="Web Development" />
+      <Link to="/WebDev"><Button name="Web Development" /></Link>
       <Button name="Live" />
       <Button name="Sports" />
       <Button name="Cricket" />
